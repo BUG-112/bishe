@@ -1,0 +1,104 @@
+{{extend '../public/model/user-module.html'}} {{block 'title'}} 动漫商城-购物车 {{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/car.css"> {{/block}} {{block 'content-title'}} 我的购物车 {{/block}} {{block 'user-content'}}
+<div class="car">
+    <div class="car-list">
+        <!-- 购物车 -->
+        <div class="my-car">
+            <!-- 单选框 -->
+            <div class="chex">
+                <input type="checkbox">
+            </div>
+            <!-- 商品图片 -->
+            <div class="car-infor">
+                <a href="/index/product">
+                    <img src="../public/img/car-img/car1.jpg" alt="">
+                </a>
+            </div>
+            <!-- 商品信息及操作 -->
+            <div class="car-detail">
+                <a href="/index/product">拼装大颗粒桶装积木</a>
+                <p>￥288&nbsp;&nbsp;库存：9999</p>
+                <div class="car-account">
+                    <button class="car-red">-</button>
+                    <input class="car1" type="text" value="1" placeholder="1">
+                    <button class="car-add">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="my-car">
+            <!-- 单选框 -->
+            <div class="chex">
+                <input type="checkbox">
+            </div>
+            <!-- 商品图片 -->
+            <div class="car-infor">
+                <a href="/index/product">
+                    <img src="../public/img/car-img/car1.jpg" alt="">
+                </a>
+            </div>
+            <!-- 商品信息及操作 -->
+            <div class="car-detail">
+                <a href="/index/product">拼装大颗粒桶装积木</a>
+                <p>￥288&nbsp;&nbsp;库存：9999</p>
+                <div class="car-account">
+                    <button class="car-red">-</button>
+                    <input class="car2" type="text" value="1" placeholder="1">
+                    <button class="car-add">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="my-car">
+            <!-- 单选框 -->
+            <div class="chex">
+                <input type="checkbox">
+            </div>
+            <!-- 商品图片 -->
+            <div class="car-infor">
+                <a href="/index/product">
+                    <img src="../public/img/car-img/car1.jpg" alt="">
+                </a>
+            </div>
+            <!-- 商品信息及操作 -->
+            <div class="car-detail">
+                <a href="/index/product">拼装大颗粒桶装积木</a>
+                <p>￥288&nbsp;&nbsp;库存：9999</p>
+                <div class="car-account">
+                    <button class="car-red">-</button>
+                    <input class="car3" type="text" value="1" placeholder="1">
+                    <button class="car-add">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="my-car">
+            <!-- 单选框 -->
+            <div class="chex">
+                <input type="checkbox">
+            </div>
+            <!-- 商品图片 -->
+            <div class="car-infor">
+                <a href="/index/product">
+                    <img src="../public/img/car-img/car1.jpg" alt="">
+                </a>
+            </div>
+            <!-- 商品信息及操作 -->
+            <div class="car-detail">
+                <a href="/index/product">拼装大颗粒桶装积木</a>
+                <p>￥288&nbsp;&nbsp;库存：9999</p>
+                <div class="car-account">
+                    <button class="car-red">-</button>
+                    <input class="car4" type="text" value="1" placeholder="1">
+                    <button class="car-add">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="car-operation">
+        <span class="total"><p>商品总额:</p></span>
+        <span class="money"><p>￥0</p></span>
+        <button class="del">删除商品</button>
+        <button class="buy">去结算</button>
+    </div>
+</div>
+{{/block}} {{block 'js'}}
+<script src="../public/js/car.js"></script>
+{{/block}}

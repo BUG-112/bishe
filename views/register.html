@@ -1,0 +1,57 @@
+{{extend '../public/model/layout.html'}} {{block 'title'}} 动漫周边商城-注册 {{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/register.css">{{/block}} {{block 'content'}}
+<div class="register">
+    <form id="user_register" method="POST">
+        <div class="register-cot">
+            <div class="shengming">请注册
+                <span><a href="/index/login">已有账号，去登陆</a></span>
+            </div>
+            <div class="account">
+                <span>账号：</span>
+                <input type="text" name="phone" placeholder="请输入11位手机号">
+            </div>
+            <div class="name">
+                <span>用户名：</span>
+                <input type="text" name="name" placeholder="请输入您的用户名">
+            </div>
+            <div class="password">
+                <span>密码：</span>
+                <input type="text" name="password" placeholder="请输入您的密码">
+            </div>
+            <div class="button">
+                <button type="submit">注册</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{{/block}} {{block 'js'}}
+<script>
+    $(function() {
+        $('#user_register').on('submit', function() {
+            event.preventDefault()
+            var form_data = $(this).serialize();
+            $.ajax({
+                url: '/index/register',
+                type: 'post',
+                data: form_data,
+                dataType: 'json',
+                success: function(data) {
+                    var err_code = data.err_code
+                    if (err_code === 0) {
+                        window.alert('注册成功')
+                        window.location.href = '/'
+                    } else if (err_code === 1) {
+                        window.alert('电话或者昵称已存在')
+
+                        window.location.href = '/index/register'
+                    } else if (err_code === 500) {
+                        window.alert('服务器忙')
+                        window.location.href = '/index/register'
+                    }
+                }
+            })
+        });
+    });
+</script>
+{{/block}}

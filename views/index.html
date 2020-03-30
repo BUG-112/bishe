@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动漫周边商城-首页</title>
+    <link rel="stylesheet" href="../public/css/head.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+</head>
+
+<body>
+    {{include '../public/model/head.html'}}
+
+    <!-- 轮播推荐 -->
+    <div id="lunbo">
+        <ul>
+            <li><img src="../public/img/index-img/transform.jpg" alt=""></li>
+            <li><img src="../public/img/index-img/shouban1.jpg" alt=""></li>
+            <li><img src="../public/img/index-img/baozhen1.jpg" alt=""></li>
+            <li><img src="../public/img/index-img/cos.jpg" alt=""></li>
+        </ul>
+        <span class="left-arrow">&lt;</span>
+        <span class="right-arrow">&gt;</span>
+    </div>
+
+    <!-- 轮播列表 -->
+    <div class="swiper">
+        <ul>
+            <li>
+                <img src="../public/img/index-img/baozhen2.jpg" alt="">
+                <a href="/index/product">hello kitty暖手捂抱枕 </a>
+            </li>
+            <li>
+                <img src="../public/img/index-img/gaoda1.jpg" alt="">
+                <a href="/index/product">hello kitty暖手捂抱枕 </a>
+            </li>
+            <li>
+                <img src="../public/img/index-img/gaoda1.jpg" alt="">
+                <a href="/index/product">hello kitty暖手捂抱枕 </a>
+            </li>
+            <li>
+                <img src="../public/img/index-img/gaoda1.jpg" alt="">
+                <a href="/index/product">hello kitty暖手捂抱枕 </a>
+            </li>
+            <li>
+                <img src="../public/img/index-img/gaoda1.jpg" alt="">
+                <a href="/index/product">hello kitty暖手捂抱枕 </a>
+            </li>
+            <li>
+                <img src="../public/img/index-img/gaoda2.jpg" alt="">
+                <a href="/index/product">hello kitty暖手捂抱枕 </a>
+            </li>
+        </ul>
+        <span class="left-arrow">&lt;</span>
+        <span class="right-arrow">&gt;</span>
+    </div>
+
+    <!-- 商品列表 -->
+    <div class="product">
+        <!-- <span>
+            <img src="../public/img/index-img/product1.jpg" alt="">
+                <a href="/index/product">高达NX EDGE STYLE Q版</a>
+                <p>￥288</p>
+                <button>立即购买</button>
+        </span> -->
+
+        <% data.forEach(function(value){ %>
+            <span id="<%= value._id %>">
+                    <img src="<%= value.img %>" alt="">
+                        <a href="/index/product?name=<%= value._id %>"><%= value.title %></a>
+                        <p>￥<%= value.price %></p>
+                        <button>立即购买</button>
+                </span>
+            <% }) %>
+
+
+    </div>
+    {{include '../public/model/footer.html'}}
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../public/js/index.js"></script>
+    <script src="../public/js/head.js"></script>
+    <script src="../public/js/base.js"></script>
+</body>
+
+</html>

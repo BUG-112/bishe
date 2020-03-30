@@ -1,0 +1,64 @@
+{{extend '../public/model/user-module.html'}} {{block 'title'}} 动漫商城-修改密码 {{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/pw-change.css"> {{/block}} {{block 'content-title'}} 修改密码{{/block}} {{block 'user-content'}}
+<form class="change-pw" method="POST">
+    <div class="old-pw">
+        <ul>
+            <li>旧密码：</li>
+            <li>
+                <input type="text" name="old_pw">&nbsp; 请输入原来的密码
+            </li>
+        </ul>
+    </div>
+    <div class="new-pw">
+        <ul>
+            <li>新密码：</li>
+            <li>
+                <input type="text" name="new_pw">&nbsp; 请输入新的的密码
+            </li>
+        </ul>
+    </div>
+    <div class="confirm">
+        <ul>
+            <li>确认新密码：</li>
+            <li>
+                <input type="text" name="confirm">&nbsp; 请再次输入新的密码
+            </li>
+        </ul>
+    </div>
+    <button type="submit" class="change-bt">确认修改</button>
+</form>
+
+{{/block}} {{block 'js'}}
+<script>
+    $(function() {
+        $('.change-pw').on('submit', function() {
+            event.preventDefault()
+            var form_data = $(this).serialize()
+            $.ajax({
+                url: '/user/pw-change',
+                type: 'post',
+                data: form_data,
+                dataType: 'json',
+                success: function(data) {
+
+                    var err_code = data.err_code
+                    var message = data.message
+                    if (err_code == 0) {
+                        window.alert(message)
+                        window.location.href = '/user/pw-change'
+                    } else if (err_code == 1) {
+                        window.alert(message)
+                        window.location.href = '/user/pw-change'
+                    } else if (err_code == 2) {
+                        window.alert(message)
+                        window.location.href = '/user/pw-change'
+                    } else {
+                        window.alert(message)
+                        window.location.href = '/user/pw-change'
+                    }
+                }
+            });
+        });
+    })
+</script>
+{{/block}}

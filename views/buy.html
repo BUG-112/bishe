@@ -1,0 +1,51 @@
+{{extend '../public/model/user-module.html'}} {{block 'title'}} 动漫商城-订单 {{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/my-confirm.css"> {{/block}} {{block 'content-title'}} 核对订单 {{/block}} {{block 'user-content'}}
+<div class="my-confirm">
+    <div class="my-adress">
+        <div class="adress-name">
+            <p>
+                <%=address.recName %> &nbsp;&nbsp;
+                    <%=address.phNumber %>
+            </p>
+        </div>
+        <hr>
+        <div class="adress">
+            <p>
+                <%=address.address %>
+            </p>
+        </div>
+    </div>
+    <div class="my-order">
+        <div class="my-list">
+            <ul id="<%=proData.number %>">
+                <li>
+                    <img src="../public/img/car-img/car1.jpg" alt="">
+                </li>
+                <li>
+                    <p>
+                        <%=proData.title %>&nbsp;&nbsp;&nbsp;&nbsp;￥
+                            <%=proData.price %>
+                    </p>
+                    <p>数量：&nbsp;&nbsp;
+                        <%=buy.account %>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="buy-detail">
+            <button>更多购买详情</button>
+        </div>
+    </div>
+    <p class="toal-money">商品总额：&nbsp;&nbsp;&nbsp;&nbsp;￥
+        <%=buy.total %>
+    </p>
+    <div class="pay-way">
+        请选择支付方式 &nbsp;&nbsp;>
+    </div>
+    <button class="pay">立即结算</button>
+
+</div>
+{{/block}} {{block 'js'}}
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../public/js/buy.js"></script>
+{{/block}}

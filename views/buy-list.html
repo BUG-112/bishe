@@ -1,0 +1,49 @@
+{{extend '../model/user-module.html'}} {{block 'title'}} 动漫商城-订单首页{{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/buy-list.css"> {{/block}} {{block 'content-title'}} 我的订单 {{/block}} {{block 'user-content'}}
+<div class="buy-list">
+    <ul class="buy-session">
+        <li><i class="iconfont">&#xe8da;</i>已付款</li>
+        <li><i class="iconfont">&#xe66d;</i>待发货</li>
+        <li><i class="iconfont">&#xe614;</i>已发货</li>
+        <li><i class="iconfont">&#xe615;</i>已收货</li>
+        <li><i class="iconfont">&#xe504;</i>退款退货</li>
+    </ul>
+    <ul class="detail-title">
+        <li>订单号</li>
+        <li>订单金额</li>
+        <li>下单时间</li>
+        <li>订单状态</li>
+        <li><button>批量删除</button></li>
+    </ul>
+    <div class="buy-detail">
+        <ul>
+            <li>022316030001</li>
+            <li>288</li>
+            <li>2020.02.23</li>
+            <li>已发货</li>
+            <li><button>查看</button><button>删除</button></li>
+        </ul>
+        <ul>
+            <li>022316030001</li>
+            <li>288</li>
+            <li>2020.02.23</li>
+            <li>已发货</li>
+            <li><button>查看</button><button>删除</button></li>
+        </ul>
+        <ul>
+            <li>022316030001</li>
+            <li>288</li>
+            <li>2020.02.23</li>
+            <li>已发货</li>
+            <li><button>查看</button><button>删除</button></li>
+        </ul>
+        <ul>
+            <li>022316030001</li>
+            <li>288</li>
+            <li>2020.02.23</li>
+            <li>已发货</li>
+            <li><button>查看</button><button>删除</button></li>
+        </ul>
+    </div>
+</div>
+{{/block}}

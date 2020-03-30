@@ -1,0 +1,67 @@
+{{extend '../public/model/layout.html'}} {{block 'title'}} 动漫商城-找回密码 {{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/pw-find.css"> {{/block}} {{block 'content'}}
+<form class="find-pw" method="POST">
+    <p>找回密码</p>
+    <div class="old-pw">
+        <ul>
+            <li>账号：</li>
+            <li>
+                <input type="text" name="phone">&nbsp; 请输入注册时的手机号
+            </li>
+        </ul>
+    </div>
+    <div class="new-pw">
+        <ul>
+            <li>新密码：</li>
+            <li>
+                <input type="text" name="new_pw">&nbsp; 请输入新的的密码
+            </li>
+        </ul>
+    </div>
+    <div class="confirm">
+        <ul>
+            <li>确认新密码：</li>
+            <li>
+                <input type="text" name="confirm">&nbsp; 请再次输入新的密码
+            </li>
+        </ul>
+    </div>
+    <button type="submit">确认</button>&nbsp; &nbsp;<i><a href="/index/register">还没账号，立即注册</a></i>
+
+</form>
+{{/block}} {{block 'js'}}
+<script>
+    $(function() {
+        $('.find-pw').on('submit', function() {
+            event.preventDefault()
+            var form_data = $(this).serialize()
+            $.ajax({
+                url: '/user/pw-forget',
+                type: 'post',
+                data: form_data,
+                dataType: 'json',
+                success: function(data) {
+                    var err_code = data.err_code
+                    var message = data.message
+                    if (err_code == 0) {
+                        window.alert(message)
+                        window.location.href = '/index/login'
+                    } else if (err_code == 1) {
+                        window.alert(message)
+                        window.location.href = '/user/pw-forget'
+                    } else if (err_code == 2) {
+                        window.alert(message)
+                        window.location.href = '/user/pw-forget'
+                    } else {
+                        window.alert(message)
+                        window.location.href = '/user/pw-forget'
+                    }
+                },
+                error: function(data) {
+                    window.alert(data)
+                }
+            });
+        });
+    })
+</script>
+{{/block}}

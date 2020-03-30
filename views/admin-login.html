@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动漫商城-管理员登陆</title>
+    <link rel="stylesheet" href="../public/css/admin/admin.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="form">
+            <form id="admin" method="POST">
+                <h1>管理员请登录！</h1>
+                <div class="admin-id" name="admin_id">
+                    <span>
+                            <p>管理员账号:</p>
+                        </span>
+                    <span>
+                            <input type="text" name="phone">
+                        </span>
+                </div>
+                <div class="admin-pw" name="admin_pw">
+                    <span>
+                            <p>管理员密码:</p>
+                        </span>
+                    <span>
+                            <input type="text" name="password">
+                        </span>
+                </div>
+                <button type="submit">登陆</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../public/js/base.js"></script>
+    <script>
+        $(function() {
+
+            $('#admin').on('submit', function() {
+                event.preventDefault()
+                var adminData = $(this).serialize()
+                $.ajax({
+                    url: '/admin/login',
+                    type: 'post',
+                    data: adminData,
+                    dataType: 'json',
+                    success: function(data) {
+                        var err_code = data.errCode
+                        var message = data.message
+                        if (err_code == 0) {
+                            window.alert(message)
+                            window.location.href = '/admin/index'
+
+                        } else if (err_code == 1) {
+
+                            window.alert(message)
+                            window.location.href = '/admin/login'
+                        } else if (err_code == 2) {
+
+                            window.alert(message)
+                            window.location.href = '/admin/login'
+                        } else if (err_code == 500) {
+
+                            window.alert(message)
+                            window.location.href = '/admin/login'
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

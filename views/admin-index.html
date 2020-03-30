@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{block 'title'}}动漫商城-管理员{{/block}}</title>
+    <link rel="stylesheet" href="../public/css/admin/admin-index.css">
+    <link rel="stylesheet" href="../public/download/icofont/iconfont.css"> {{block 'css'}}{{/block}}
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="nav">
+        <ul>
+            <li>二次猿科技</li>
+            <li><i class="iconfont icon-caidan pointer caidan"></i></li>
+            <li class="pointer">{{admin.name}} &nbsp;&nbsp;<i class="iconfont icon-icozuola1"></i></li>
+        </ul>
+        <div class="admin-list">
+            <ul>
+                <li class="pointer">更改密码</li>
+                <li class="pointer logout">退出</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <!-- 左侧导航栏 -->
+        <div class="left-nav">
+            <ul>
+                <li class="hover product-xiala"><i class="iconfont icon-goods icon"></i> 商品管理<i class="iconfont icon-icozuola2"></i></li>
+                <ul class="product-list" id="block">
+                    <li class="hover"><i class="iconfont icon-icozuola"></i> 查看商品</li>
+                    <li class="hover proAdd"><i class="iconfont icon-icozuola"></i> 添加商品</li>
+                </ul>
+                <li class="hover order-xiala"><i class="iconfont icon-order icon"></i> 订单管理<i class="iconfont icon-icozuola2"></i></li>
+                <ul class="order-list">
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>所有订单</li>
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>待发货</li>
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>已发货</li>
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>待签收</li>
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>已签收</li>
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>待退货</li>
+                    <li class="hover"><i class="iconfont icon-icozuola"></i>已退货</li>
+                </ul>
+            </ul>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="operation">
+            {{block 'operation'}}
+            <div style="height: 500px;">
+
+            </div>
+            {{/block}}
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../public/js/base.js"></script>
+    <script src="../public/js/admin-index.js"></script>
+    {{block 'js'}}{{/block}}
+</body>
+
+</html>

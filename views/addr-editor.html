@@ -1,0 +1,37 @@
+{{extend '../public/model/user-module.html'}} {{block 'title'}}动漫商城-编辑收货地址{{/block}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/user-address.css">
+<link rel="stylesheet" href="../public/download/layui/css/layui.css"> {{/block}} {{block 'content-title'}} 编辑收货地址 {{/block}} {{block 'user-content'}}
+<div class="address-edit">
+    <!-- <div class="addressed">
+        <input type="radio" name="address" checked>
+        <div class="address-name">
+            <span><i>1 &nbsp;&nbsp;&nbsp;张三：2261776301</i> <button>查看编辑</button></span>
+        </div>
+        <div class="address">
+            <span><i>xx省xx市xxxx小区</i><button>删除</button></span>
+        </div>
+    </div> -->
+
+    <%if(addr){%>
+        <form class="addrForm" method="POST" style="display: block;">
+            <ul class="addr-add">
+                <li class="addr-name"><i>收货人：</i><input type="text" name="recName" value="<%=addr.recName %>"></li>
+                <li class="addr-number"><i>联系电话：</i><input type="text" name="phNumber" value="<%=addr.phNumber %>"></li>
+                <li class="addr">
+                    <i>收货地址：</i><input type="text" style="margin-left: 2%;" name="sheng" value="<%=sheng %>">省
+                    <input type="text" name="shi" value="<%=shi %>">市
+                    <input type="text" name="xian" placeholder="县/区" value="<%=xian %>">
+                    <input type="text" placeholder="详细地址" name="jiedao" value="<%=jiedao %>"></li>
+                <li>
+                    <button type="button" class="layui-btn layui-btn-sm cancel2">取消</button>
+                    <button type="submit" class="layui-btn layui-btn-sm">保存</button></li>
+            </ul>
+        </form>
+        <%}%>
+
+
+</div>
+{{/block}} {{block 'js'}}
+<script src="../public/js/user-address.js "></script>
+
+{{/block}}

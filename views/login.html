@@ -1,0 +1,61 @@
+{{extend '../public/model/layout.html'}} {{block 'css'}}
+<link rel="stylesheet" href="../public/css/login.css"> {{/block}} {{block 'title'}} 动漫周边商城-登陆{{/block}} {{block 'content'}}
+<div class="login">
+    <form id="login_form" method="POST">
+        <div class="login-cot">
+            <div class="shengming">请登录</div>
+            <div class="account">
+                <span>账号：</span>
+                <input type="text" name="phone" placeholder="您注册时的账号">
+            </div>
+            <div class="password">
+                <span>密码：</span>
+                <input type="text" name="password" placeholder="您注册时的密码">
+            </div>
+            <div class="button">
+                <button type="submit">登陆</button>
+                <span><a href="/user/pw-forget">忘记密码？</a></span>
+            </div>
+            <div class="register">
+                <a href="/index/register">还没有账号 立即注册！</a>
+            </div>
+        </div>
+    </form>
+</div>
+{{/block}} {{block 'js'}}
+<script>
+    $(function() {
+        $('#login_form').on('submit', function() {
+            event.preventDefault()
+            var form_data = $(this).serialize();
+            $.ajax({
+                url: '/index/login',
+                type: 'post',
+                data: form_data,
+                dataType: 'json',
+                success: function(data) {
+                    var err_code = data.err_code
+                    var message = data.message
+                    if (err_code == 0) {
+                        window.alert(message)
+                        window.location.href = '/'
+
+                    } else if (err_code == 1) {
+
+                        window.alert(message)
+                        window.location.href = '/index/login'
+                    } else if (err_code == 2) {
+
+                        window.alert(message)
+                        window.location.href = '/index/login'
+                    } else if (err_code == 500) {
+
+                        window.alert(message)
+                        window.location.href = '/index/login'
+                    }
+                }
+            })
+        });
+    });
+</script>
+{{/block}}
