@@ -1,0 +1,129 @@
+.addressed {
+    width: 80%;
+    height: 12%;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+.addressed input {
+    float: left;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.addressed div {
+    margin-left: 5%;
+}
+
+.address-edit {
+    padding-top: 1%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+}
+
+.address-name {
+    border: 1px solid #999;
+    border-bottom: 0;
+    width: 100%;
+    height: 50%;
+    line-height: 3.5rem;
+}
+
+.address {
+    width: 100%;
+    height: 50%;
+    border: 1px solid #999;
+    line-height: 3.5rem;
+}
+
+.addressed i {
+    display: inline-block;
+    width: 30%;
+    color: #999;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.addressed button {
+    width: 10%;
+    height: 60%;
+    border: 0;
+    border-radius: 5%;
+    background-color: #292929;
+    color: #999;
+    margin-left: 10%;
+}
+
+.addressed input[type="radio"] {
+    width: 2.5%;
+    height: 31%;
+}
+
+.addressed button:hover,
+.address-opa button:hover {
+    cursor: pointer;
+    background-color: #202020;
+}
+
+.address-opa {
+    width: 100%;
+    height: 12%;
+}
+
+.address-opa button {
+    border: 0;
+    background-color: #292929;
+    color: #999;
+    width: 13%;
+    height: 50%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+
+/* 弹出框样式 */
+
+.addrForm {
+    border: 10px solid white;
+    float: left;
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+    height: 250px;
+    background-color: whitesmoke;
+    bottom: 30%;
+}
+
+.addr-add {
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.addr-add li {
+    margin-top: 5%;
+}
+
+.addr-add i {
+    font-style: normal;
+    width: 18%;
+    display: inline-block;
+}
+
+.addr-name>input,
+.addr-number>input {
+    margin-left: 2%;
+}
+
+.addr input {
+    width: 10%;
+}
+
+.addr input:last-child {
+    width: 25%;
+}
+
+.addr-add button {
+    width: 15%;
+}

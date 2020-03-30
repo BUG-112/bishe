@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+li::selection {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #F1F1F1;
+}
+
+#block {
+    display: block;
+}
+
+
+/* 顶部导航栏 */
+
+.nav {
+    width: 100%;
+    height: 10%;
+    background-color: #202020;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.nav>ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.nav>ul li {
+    float: left;
+    position: absolute;
+    height: 100%;
+}
+
+.nav>ul li:first-child {
+    width: 30%;
+    color: #999;
+    line-height: 6.5rem;
+    font-size: 1.8rem;
+    left: 5%;
+}
+
+
+/* 菜单按钮 */
+
+.nav>ul li:nth-child(2) {
+    width: 2.5%;
+    left: 12%;
+    line-height: 6.5rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.nav>ul li:nth-child(2) i {
+    color: #999;
+    font-size: 3rem;
+}
+
+
+/* 管理员菜单 */
+
+.nav>ul li:last-child {
+    width: 7%;
+    color: #999;
+    line-height: 6.5rem;
+    text-align: center;
+    right: 16%;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+}
+
+.nav>ul li:last-child i {
+    color: #999;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.nav>ul li:last-child:hover {
+    border-bottom: 0.5rem solid #5FB878;
+}
+
+
+/*管理员下拉菜单 */
+
+.admin-list {
+    float: left;
+    position: absolute;
+    width: 6%;
+    height: 100%;
+    border: 1px solid #202020;
+    box-sizing: border-box;
+    box-shadow: 0.5rem 0.5rem 0.5rem #999;
+    top: 102%;
+    right: 16.5%;
+    display: none;
+    z-index: 100;
+    background-color: #999;
+}
+
+.admin-list ul {
+    width: 100%;
+    height: 100%;
+}
+
+.admin-list li {
+    text-align: center;
+    width: 100%;
+    font-size: 1.6rem;
+    margin-top: 10%;
+}
+
+.admin-list li:hover {
+    background-color: #F1F1F1;
+}
+
+
+/* 左侧导航栏 */
+
+.content {
+    position: relative;
+}
+
+.content .left-nav {
+    width: 12%;
+    background-color: #eee;
+    transition: width 0.1s;
+}
+
+.content>div {
+    float: left;
+    position: absolute;
+}
+
+.operation {
+    width: 87%;
+    left: 13%;
+    background-color: #f9f9f9;
+}
+
+.left-nav ul {
+    width: 100%;
+}
+
+.left-nav>ul>li {
+    width: 100%;
+    font-size: 1.6rem;
+    margin-top: 5%;
+    padding: 2%;
+    height: 24px;
+    overflow: hidden;
+    line-height: 24px;
+}
+
+.left-nav>ul>li>i:last-child {
+    margin-left: 30%;
+}
+
+.hover:hover {
+    cursor: pointer;
+    background-color: #009688;
+}
+
+.product-list,
+.order-list {
+    display: none;
+}
+
+.product-list li,
+.order-list li {
+    margin-top: 5%;
+    font-size: 1.4rem;
+    padding: 2%;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.product-list li i,
+.order-list li i {
+    margin-left: 15%;
+    margin-right: 5%;
+}

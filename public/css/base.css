@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../download/icofont/iconfont.eot');
+    src: url('../download/icofont/iconfont.eot?#iefix') format('embedded-opentype'), url('../download/icofont/iconfont.woff2') format('woff2'), url('../download/icofont/iconfont.woff') format('woff'), url('../download/icofont/iconfont.ttf') format('truetype'), url('../download/icofont/iconfont.svg#iconfont') format('svg');
+}
+
+html {
+    font-size: 10px;
+}
+
+li::selection {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-color: #000;
+    position: relative;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}

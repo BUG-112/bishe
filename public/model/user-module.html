@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{block 'title'}} 默认头部{{/block}}</title>
+    <link rel="stylesheet" href="../public/css/head.css">
+    <link rel="stylesheet" href="../public/css/base.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/download/icofont/iconfont.css">
+    <link rel="stylesheet" href="../public/css/user-module.css"> {{block 'css'}} {{/block}}
+</head>
+
+<body>
+    {{include './head.html'}}
+    <div class="user">
+        <div class="user-list">
+            <div class="list-title">
+                <h1>我的账户</h2>
+            </div>
+            <div class="list-content">
+                <ul>
+                    <li><i class="iconfont icon-shouye"></i><a href="/user/user-address">编辑收货地址</a></li>
+                    <li><i class="iconfont icon-shouye"></i><a href="/user/car">我的购物车</a></li>
+                    <li><i class="iconfont icon-shouye"></i><a href="/user/buy-list">我的订单</a></li>
+                    <li><i class="iconfont icon-shouye"></i><a href="/user/pw-change">修改密码</a></li>
+                    <li><i class="iconfont icon-shouye"></i><a href="#">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user-content">
+            <div class="content-title">
+                <h1>{{block 'content-title'}}账户首页{{/block}}</h1>
+            </div>
+            {{block 'user-content'}}{{/block}}
+        </div>
+    </div>
+    {{include './footer.html'}}
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../public/js/head.js"></script>
+    <script src="../public/js/base.js"></script>
+    {{block 'js'}} {{/block}}
+</body>
+
+</html>

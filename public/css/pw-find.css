@@ -1,0 +1,63 @@
+.find-pw {
+    width: 60%;
+    height: 80%;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
+
+.find-pw>p {
+    font-size: 1.6rem;
+    color: #999;
+    margin-top: 4%;
+}
+
+.find-pw>div {
+    width: 100%;
+    height: 10%;
+    margin-top: 4%;
+    position: relative;
+}
+
+.find-pw ul {
+    height: 100%;
+}
+
+.find-pw li {
+    height: 100%;
+    float: left;
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    font-size: 1.4rem;
+    color: #999;
+}
+
+.find-pw input {
+    height: 45%;
+}
+
+.old-pw li:last-child,
+.new-pw li:last-child,
+.confirm li:last-child {
+    left: 20%
+}
+
+.find-pw button {
+    color: #999;
+    width: 16%;
+    height: 8%;
+    background-color: #292929;
+    border-color: #292929;
+    margin-left: 20%;
+}
+
+.find-pw button:hover {
+    cursor: pointer;
+    background-color: #202020;
+    border-color: #202020;
+}
+
+.find-pw>i a {
+    color: #999;
+    font-size: 1.4rem;
+}

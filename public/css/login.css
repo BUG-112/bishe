@@ -1,0 +1,79 @@
+.login {
+    width: 100%;
+    height: 66.8%;
+    padding-top: 2%;
+    box-sizing: border-box;
+    background: url(../img/login-img/login-img02.jpg);
+    background-position: center;
+}
+
+form {
+    height: 80%;
+}
+
+.login-cot {
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+
+.login-cot a,
+.login-cot span {
+    color: black;
+}
+
+.shengming {
+    width: 10%;
+    height: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto;
+    color: blak;
+}
+
+.account,
+.password,
+.button {
+    margin-top: 5%;
+}
+
+.account,
+.password,
+.button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    height: 12%;
+}
+
+.account input,
+.password input {
+    width: 40%;
+    height: 90%;
+}
+
+.button button {
+    background-color: #292929;
+    border: 0;
+    width: 10%;
+    height: 90%;
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.button button:hover {
+    cursor: pointer;
+    background-color: #202020;
+}
+
+.button span {
+    margin-left: 3%;
+}
+
+.register {
+    margin-top: 2%;
+    font-size: 1.4rem;
+    font-weight: bold;
+}

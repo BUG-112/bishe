@@ -1,0 +1,36 @@
+<div id="head">
+    <div class="logo">
+        <img src="../public/img/head-img/logo.png" alt="">
+    </div>
+    <div class="session">
+        <ul>
+            {{if user}}
+            <li class="iconfont"><a href="/user/pw-change">&#xe621; {{user.name}}</a></li>
+            <li class="iconfont"><a href="/logout">&#xe6d6; 退出</a></li>
+            <li class="iconfont"><a href="/user/car">&#xe51c; 购物车</a></li>
+            {{else}}
+            <li class="iconfont"><a href="/index/login">&#xe621; 登陆</a></li>
+            <li class="iconfont"><a href="/index/register">&#xe6d6; 注册</a></li>
+            <li class="iconfont"><a href="/user/car">&#xe51c; 购物车</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</div>
+<!-- 导航栏 -->
+<div id="nav">
+    <!-- 导航条 -->
+    <div class="list">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/model">模型</a></li>
+            <li><a href="/model">手办</a></li>
+            <li><a href="/model">抱枕</a></li>
+            <li><a href="/model">服装</a></li>
+        </ul>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search">
+        <input type="text" placeholder="搜索关键字">
+        <span><a class="iconfont" href="javascript:void(0);">&#xe606;</a></span>
+    </div>
+</div>

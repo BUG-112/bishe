@@ -1,0 +1,54 @@
+h2 {
+    margin-left: 74%;
+    margin-top: 3%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 96%;
+    margin: 1% auto;
+}
+
+table td {
+    width: 20%;
+}
+
+thead {
+    border-top: 5px solid #3C8DBC;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+}
+
+table tr {
+    height: 4rem;
+    background-color: #fff;
+}
+
+tbody td {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+tbody button {
+    width: 30%;
+}
+
+tbody button:hover {
+    cursor: pointer;
+}
+
+
+/* 分页器 */
+
+.pager {
+    width: 96%;
+    position: relative;
+    height: 5rem;
+    margin: 1% auto;
+    background-color: pink;
+}

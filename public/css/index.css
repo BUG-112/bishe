@@ -1,0 +1,198 @@
+/* 轮播图 */
+
+
+/* body w1350 h695 */
+
+#lunbo {
+    width: 100%;
+    position: relative;
+}
+
+#lunbo li {
+    float: left;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+#lunbo li:first-child {
+    display: block;
+}
+
+#lunbo li img {
+    width: 100%;
+    -ms-interpolation-mode: bicubic;
+}
+
+#lunbo span {
+    float: left;
+    position: absolute;
+    top: 46%;
+    width: 3%;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #262626;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2rem;
+    color: #BAB9B8;
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+#lunbo span:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#lunbo .left-arrow {
+    left: 1.2em;
+}
+
+#lunbo .right-arrow {
+    right: 1.2em;
+}
+
+
+/* 轮播列表 */
+
+.swiper {
+    /* margin-top: 35%; */
+    /* 340px */
+    height: 50%;
+    width: 100%;
+    background-color: #262626;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper li {
+    float: left;
+    position: absolute;
+    width: 19%;
+    /* 320px */
+    height: 94%;
+    left: 0.8%;
+    top: 6.5%;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.swiper li:nth-child(2) {
+    left: 20.5%;
+}
+
+.swiper li:nth-child(3) {
+    left: 40.5%;
+}
+
+.swiper li:nth-child(4) {
+    left: 60.5%;
+}
+
+.swiper li:nth-child(5) {
+    left: 80.5%;
+}
+
+.swiper li:last-child {
+    left: 100.5%;
+}
+
+.swiper li img {
+    width: 100%;
+}
+
+.swiper li img:hover {
+    cursor: pointer;
+}
+
+.swiper li a {
+    display: inline-block;
+    margin-top: 4.7%;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.swiper span {
+    float: left;
+    position: absolute;
+    width: 3%;
+    height: 40px;
+    top: 36%;
+    border-radius: 50%;
+    background-color: #262626;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2rem;
+    color: #BAB9B8;
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+.swiper span:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.swiper .left-arrow {
+    left: 1.2rem;
+}
+
+.swiper .right-arrow {
+    right: 1.2rem;
+}
+
+
+/* 产品列表 */
+
+.product {
+    width: 100%;
+    position: relative;
+}
+
+.product span {
+    margin-top: 1.5%;
+    margin-left: 0.7%;
+    width: 24%;
+    /* 444px */
+    text-align: center;
+    background-color: #262626;
+    display: inline-block;
+}
+
+.product a,
+.product img {
+    width: 100%;
+}
+
+.product img:hover {
+    cursor: pointer;
+}
+
+.product a {
+    font-size: 1.6rem;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.product p {
+    font-size: 1.4rem;
+    color: #C8C8BE;
+}
+
+.product button {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 70%;
+    background-color: #f9db2d;
+    border: 0;
+    font-size: 1.6rem;
+}
+
+.product button:hover {
+    background-color: #CFB62F;
+    cursor: pointer;
+}

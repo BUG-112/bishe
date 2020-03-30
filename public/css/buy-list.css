@@ -1,0 +1,105 @@
+.buy-list {
+    box-sizing: border-box;
+    padding-top: 1%;
+    width: 100%;
+    height: 90%;
+}
+
+.buy-session {
+    width: 100%;
+    height: 7%;
+    position: relative;
+}
+
+.buy-session li,
+.detail-title li,
+.buy-detail li {
+    box-sizing: border-box;
+    color: #999;
+    float: left;
+    position: absolute;
+    border: 1px solid #999;
+    border-right: 0;
+    width: 20%;
+    height: 100%;
+    font-size: 1.6rem;
+    line-height: 250%;
+    text-align: center;
+}
+
+.buy-session li:hover {
+    cursor: pointer;
+}
+
+.buy-session li:last-child,
+.detail-title li:last-child,
+.buy-detail li:last-child {
+    right: 0;
+    border-right: 1px solid #999;
+}
+
+.buy-session li:nth-child(2),
+.detail-title li:nth-child(2),
+.buy-detail li:nth-child(2) {
+    left: 20%;
+}
+
+.buy-session li:nth-child(3),
+.detail-title li:nth-child(3),
+.buy-detail li:nth-child(3) {
+    left: 40%;
+}
+
+.buy-session li:nth-child(4),
+.detail-title li:nth-child(4),
+.buy-detail li:nth-child(4) {
+    right: 20%;
+}
+
+.detail-title {
+    margin-top: 1%;
+    width: 100%;
+    height: 7%;
+    position: relative;
+}
+
+.detail-title button {
+    border: 0;
+    border-radius: 5%;
+    width: 50%;
+    height: 60%;
+    background-color: #292929;
+    color: #999;
+}
+
+.detail-title button:hover {
+    cursor: pointer;
+    background-color: #202020;
+}
+
+.buy-detail {
+    margin-top: 1%;
+    width: 100%;
+    height: 70%;
+}
+
+.buy-detail ul {
+    width: 100%;
+    height: 10%;
+    position: relative;
+}
+
+.buy-detail ul button {
+    width: 20%;
+    height: 60%;
+    border: 0;
+    margin-left: 5%;
+    background-color: #292929;
+    color: #999;
+    border-radius: 6%;
+}
+
+.buy-detail ul button:hover {
+    cursor: pointer;
+    background-color: #202020;
+}

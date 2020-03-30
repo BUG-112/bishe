@@ -1,0 +1,154 @@
+.car {
+    width: 100%;
+    height: 100%;
+}
+
+.car-list {
+    width: 100%;
+    height: 75%;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+
+/* 购物车单个商品 */
+
+.my-car {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    margin-top: 1%;
+    border-bottom: 1px solid #999;
+    margin-bottom: 1%;
+}
+
+.my-car>div {
+    float: left;
+    position: absolute;
+}
+
+.chex {
+    width: 2%;
+    height: 24%;
+    top: 38%;
+    left: 1%;
+}
+
+.chex input {
+    width: 100%;
+    height: 100%;
+}
+
+.car-infor {
+    width: 9.2%;
+    height: 100%;
+    left: 4%;
+    position: relative;
+}
+
+.car-infor a {
+    display: inline-block;
+    width: 87%;
+    height: 87%;
+}
+
+.car-infor a img {
+    width: 100%;
+}
+
+.car-detail {
+    width: 30%;
+    height: 100%;
+    left: 14%;
+    box-sizing: border-box;
+}
+
+.car-detail a {
+    font-size: 1.4rem;
+    color: #999;
+}
+
+.car-detail p {
+    margin-top: 2%;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.car-account {
+    width: 100%;
+    height: 25%;
+}
+
+.car-account input {
+    width: 20%;
+    height: 80%;
+    margin-top: 4%;
+}
+
+.car-account button {
+    width: 8%;
+    height: 90%;
+}
+
+
+/* 商品合计  */
+
+.car-operation {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.car-operation>span {
+    float: left;
+    position: absolute;
+}
+
+.total {
+    width: 7%;
+    height: 15%;
+    top: 2%;
+    left: 2%;
+}
+
+.total p {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.money {
+    width: 7%;
+    height: 15%;
+    right: 4%;
+    top: 2%;
+}
+
+.money p {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.car-operation button {
+    margin-top: 5%;
+    width: 10%;
+    height: 22%;
+    background-color: #292929;
+    color: #999;
+    border: 1px solid #292929;
+    border-radius: 8%;
+}
+
+.car-operation button:hover {
+    cursor: pointer;
+    background-color: #202020;
+    border-color: #202020;
+}
+
+.del {
+    margin-left: 2%;
+}
+
+.buy {
+    margin-left: 70%;
+}

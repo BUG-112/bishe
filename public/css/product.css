@@ -1,0 +1,110 @@
+/* 商品信息 */
+
+.product {
+    width: 100%;
+    height: 60%;
+    background-color: #262626;
+    position: relative;
+}
+
+.product>div {
+    float: left;
+    position: absolute;
+}
+
+.product .img,
+.product .infor {
+    width: 25%;
+    height: 75%;
+    top: 5%;
+}
+
+.product .img img {
+    width: 100%;
+}
+
+
+/* 商品有关操作 */
+
+.product .infor {
+    left: 28%;
+}
+
+.infor div {
+    width: 100%;
+    height: 16%;
+    line-height: 5rem;
+}
+
+.infor div p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #949494;
+}
+
+
+/* 商品名称 */
+
+.infor div:first-child {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #949494;
+}
+
+
+/* 商品价格 */
+
+.price p {
+    display: inline-block;
+}
+
+.price p:last-child {
+    margin-left: 5%;
+}
+
+
+/* 购买数量 */
+
+.account span {
+    display: inline-block;
+    color: #949494;
+}
+
+.account span:last-child {
+    margin-left: 5%;
+}
+
+.account input {
+    width: 18%;
+    height: 20%;
+}
+
+.account button {
+    width: 10%;
+    height: 10%;
+}
+
+.account button:hover {
+    cursor: pointer;
+}
+
+
+/* 商品购买 */
+
+.button button {
+    width: 25%;
+    height: 60%;
+    background-color: #303030;
+    border: 0;
+    color: blanchedalmond;
+}
+
+.button button:hover {
+    cursor: pointer;
+    background-color: #202020;
+}
+
+.button button:last-child {
+    margin-left: 5%;
+}

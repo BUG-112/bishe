@@ -1,0 +1,51 @@
+.content {
+    width: 100%;
+    position: relative;
+}
+
+.content span {
+    margin-top: 1.5%;
+    margin-left: 0.6%;
+    width: 24%;
+    /* 444px */
+    text-align: center;
+    background-color: #262626;
+    display: inline-block;
+}
+
+.content a,
+.content img {
+    width: 100%;
+}
+
+.content img:hover {
+    cursor: pointer;
+}
+
+.content a {
+    font-size: 1.6rem;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.content p {
+    font-size: 1.4rem;
+    color: #C8C8BE;
+}
+
+.content button {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 70%;
+    background-color: #f9db2d;
+    border: 0;
+    font-size: 1.6rem;
+}
+
+.content button:hover {
+    background-color: #CFB62F;
+    cursor: pointer;
+}
