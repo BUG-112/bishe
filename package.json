@@ -12,7 +12,7 @@
     "dependencies": {
         "art-template": "^4.13.2",
         "body-parser": "^1.19.0",
-        "css-loader": "^3.4.2",
+        "css-loader": "^6.7.3",
         "ejs": "^3.0.1",
         "express": "^4.17.1",
         "express-art-template": "^1.0.1",
@@ -25,8 +25,8 @@
         "minimist": ">=1.2.2"
     },
     "devDependencies": {
-        "webpack": "^4.42.0",
-        "webpack-cli": "^3.3.11",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
         "minimist": ">=1.2.2"
     }
 }
